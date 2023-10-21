@@ -1,0 +1,20 @@
+# Basic dependencies
+pandas==1.3.3
+numpy==1.21.2
+matplotlib==3.4.3
+seaborn==0.11.2
+streamlit==1.6.0
+
+# Snowflake-related dependencies
+snowflake-connector-python==2.6.3
+snowflake-sqlalchemy==1.2.4
+snowflake-snowpark==0.2.0
+snowflake-ml==2.1.0
+
+# Machine learning and data analysis libraries
+scikit-learn==0.24.2
+xgboost==1.4.2
+# Add other machine learning or data analysis libraries here
+
+# Python version
+python==3.9
