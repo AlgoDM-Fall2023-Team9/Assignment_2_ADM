@@ -1,5 +1,8 @@
 # Assignment_2_ADM
+## APPLICATION LINK: 
 
+1)  https://forecastandanomaly.streamlit.app/
+2)  https://finalslpy-66mmqw2rjdzbudjtzmknsu.streamlit.app/
 # Project Title
 
 **Ad Impression Forecasting and Anomaly Detection using Snowflake's ML-Powered Analysis**
@@ -151,3 +154,8 @@ CODELABS: https://codelabs-preview.appspot.com/?file_id=1WR5ZXhYVMP-GxSyWELGjM2q
 ZOOM RECORDING: https://northeastern.zoom.us/rec/share/yYJZcZP_HoDgtLO66SsbQWeUAzcTrHFIFjFtYYvffhnpIQPfzuLR7MtncJL4nD7k.Xpph_JBVrWFbbnsF?startTime=1697944398000
 
 Passcode: mJ@br5j%
+
+Contributions: 
+Kimaya: 33%
+Siddhesh: 33%
+Shaurin: 34%
