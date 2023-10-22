@@ -32,7 +32,7 @@ credit_rating = st.selectbox("Credit Rating", ["Good", "High Risk", "Low Risk"])
 education_status = st.selectbox("Education Status", ["2 yr Degree", "4 yr Degree", "Advanced Degree", "College", "Primary", "Secondary", "Unknown"])
 birth_year = st.number_input("Birth Year", value=1990)
 dependency_count = st.number_input("Dependency Count", value=1)
-total_sales = st.number_input("Total Sales", value=20000)
+Aggregated_Income = st.number_input("Aggregated Income", value=20000)
 
 # Error flag to track invalid inputs
 input_error = False
@@ -46,7 +46,7 @@ if st.button("Predict"):
         "education_status": education_status,
         "C_BIRTH_YEAR": birth_year,
         "CD_DEP_COUNT": dependency_count,
-        "TOTAL_SALES": total_sales
+        "Aggregated Income": Aggregated_Income
     }
 
     # Define mappings for feature names
@@ -78,7 +78,7 @@ if st.button("Predict"):
         "CD_EDUCATION_STATUS_UNKNOWN": 0.0,
         "C_BIRTH_YEAR": 0,
         "CD_DEP_COUNT": 0,
-        "TOTAL_SALES": 0
+        "Aggregated_Income": 0
     }
 
     # Update input_data_dict based on user inputs
@@ -90,7 +90,7 @@ if st.button("Predict"):
             if feature == "C_BIRTH_YEAR" and (value < 1900 or value > 2023):  # Validate Birth Year
                 input_error = True
                 st.error("Invalid input for Birth Year. Please enter a valid year between 1900 and 2023.")
-            elif feature == "TOTAL_SALES" and (value < 0):
+            elif feature == "Aggregated_Income" and (value < 0):
                 input_error = True
                 st.error("Invalid input for Total Sales. Please enter a non-negative value.")
 
