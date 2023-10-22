@@ -24,12 +24,12 @@ import seaborn as sns
 
 import snowflake.snowpark.dataframe
 
-#Ensure that your credentials are stored in creds.json
-with open('creds.json') as f:
-    data = json.load(f)
-    USERNAME = data['user']
-    PASSWORD = data['password']
-    SF_ACCOUNT = data['account']
+# #Ensure that your credentials are stored in creds.json
+# with open('creds.json') as f:
+#     data = json.load(f)
+#     USERNAME = data['user']
+#     PASSWORD = data['password']
+#     SF_ACCOUNT = data['account']
   
 
 CONNECTION_PARAMETERS = {
