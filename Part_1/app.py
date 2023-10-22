@@ -125,8 +125,8 @@ else:
 
         return plt
 
-        # Streamlit app
-        st.title("Time Series Data")
+    # Streamlit app
+    st.title("Time Series Data")
 
-        # Display the plot in Streamlit
-        st.pyplot(create_time_series_plot(final_data))
+    # Display the plot in Streamlit
+    st.pyplot(create_time_series_plot(final_data))
