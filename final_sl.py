@@ -55,7 +55,7 @@ def app1():
     marital_status = st.selectbox("Marital Status", ["D", "M", "S", "U", "W"])
     birth_year = st.number_input("Birth Year", value=1998)
     dependency_count = st.number_input("Dependency Count", value=1)
-    total_sales = st.number_input("Total Sales", value=14000)
+    Aggregated_Income = st.number_input("Aggregated Income", value=14000)
 
     
     # Error flag to track invalid inputs
@@ -70,7 +70,7 @@ def app1():
             "education_status": education_status,
             "C_BIRTH_YEAR": birth_year,
             "CD_DEP_COUNT": dependency_count,
-            "TOTAL_SALES": total_sales
+            "Aggregated Income": Aggregated_Income
         }
 
         # Define mappings for feature names
@@ -102,7 +102,7 @@ def app1():
             "CD_EDUCATION_STATUS_UNKNOWN": 0,
             "C_BIRTH_YEAR": 0,
             "CD_DEP_COUNT": 0,
-            "TOTAL_SALES": 0
+            "Aggregated Income": 0
 }
 
 
@@ -115,9 +115,9 @@ def app1():
                 if feature == "C_BIRTH_YEAR" and (value < 1900 or value > 2023):  # Validate Birth Year
                     input_error = True
                     st.error("Invalid input for Birth Year. Please enter a valid year between 1900 and 2023.")
-                elif feature == "TOTAL_SALES" and (value < 0):
+                elif feature == "Aggregated Income" and (value < 0):
                     input_error = True
-                    st.error("Invalid input for Total Sales. Please enter a non-negative value.")
+                    st.error("Invalid input for Aggregated Income. Please enter a non-negative value.")
 
         if not input_error:
             # Create a DataFrame from the input data
