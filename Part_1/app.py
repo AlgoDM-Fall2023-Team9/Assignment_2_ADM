@@ -106,27 +106,27 @@ else:
     final_data=df1
 
 
-# Function to create the time series graph
-def create_time_series_plot(data):
-    df = data
-    df['TS'] = pd.to_datetime(df['TS'])
+    # Function to create the time series graph
+    def create_time_series_plot(data):
+        df = data
+        df['TS'] = pd.to_datetime(df['TS'])
 
-    plt.figure(figsize=(12, 6))
-    ax = sns.lineplot(x='TS', y='ACTUAL', data=df, label='Actual', color='blue')
-    ax = sns.lineplot(x='TS', y='FORECAST', data=df, label='Forecast', color='green')
+        plt.figure(figsize=(12, 6))
+        ax = sns.lineplot(x='TS', y='ACTUAL', data=df, label='Actual', color='blue')
+        ax = sns.lineplot(x='TS', y='FORECAST', data=df, label='Forecast', color='green')
 
 
-    plt.xlabel('Date')
-    plt.ylabel('Value')
-    plt.title('Time Series Graph')
-    plt.xticks(rotation=45)
-    plt.legend()
-    plt.grid(True)
+        plt.xlabel('Date')
+        plt.ylabel('Value')
+        plt.title('Time Series Graph')
+        plt.xticks(rotation=45)
+        plt.legend()
+        plt.grid(True)
 
-    return plt
+        return plt
 
-    # Streamlit app
-    st.title("Time Series Data")
+        # Streamlit app
+        st.title("Time Series Data")
 
-    # Display the plot in Streamlit
-    st.pyplot(create_time_series_plot(final_data))
+        # Display the plot in Streamlit
+        st.pyplot(create_time_series_plot(final_data))
