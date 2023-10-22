@@ -81,29 +81,29 @@ if selected_option == 'Anomaly Detection':
         st.write(result)
 else:
     st.header("Time Series Data")
-session.sql('CALL impressions_forecast!FORECAST(FORECASTING_PERIODS => 14)').collect()
+    session.sql('CALL impressions_forecast!FORECAST(FORECASTING_PERIODS => 14)').collect()
 
-forecast = '''
-SELECT day AS ts, impression_count AS actual, NULL AS forecast, NULL AS lower_bound, NULL AS upper_bound 
-FROM daily_impressions 
-UNION ALL 
-SELECT ts, NULL AS actual, forecast, lower_bound, upper_bound 
-FROM TABLE(RESULT_SCAN(-1))
-'''
+    forecast = '''
+    SELECT day AS ts, impression_count AS actual, NULL AS forecast, NULL AS lower_bound, NULL AS upper_bound 
+    FROM daily_impressions 
+    UNION ALL 
+    SELECT ts, NULL AS actual, forecast, lower_bound, upper_bound 
+    FROM TABLE(RESULT_SCAN(-1))
+    '''
 
-result = session.sql(forecast)
-print(type(result))
-print(result)
-df=result
+    result = session.sql(forecast)
+    print(type(result))
+    print(result)
+    df=result
 
-# Convert it to a Pandas DataFrame
+    # Convert it to a Pandas DataFrame
 
-pandas_dataframe = result.toPandas()
-df1=pandas_dataframe
-st.write(df1)
-df=df1
+    pandas_dataframe = result.toPandas()
+    df1=pandas_dataframe
+    st.write(df1)
+    df=df1
 
-final_data=df1
+    final_data=df1
 
 
 # Function to create the time series graph
@@ -125,8 +125,8 @@ def create_time_series_plot(data):
 
     return plt
 
-# Streamlit app
-st.title("Time Series Data")
+    # Streamlit app
+    st.title("Time Series Data")
 
-# Display the plot in Streamlit
-st.pyplot(create_time_series_plot(final_data))
+    # Display the plot in Streamlit
+    st.pyplot(create_time_series_plot(final_data))
